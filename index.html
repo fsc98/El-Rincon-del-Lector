@@ -3,138 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora un mundo de libros en El Rincón del Lector. Encuentra reseñas, recomendaciones y más.">
-    <title>El Rincón Del Lector</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5194567494878923"
-     crossorigin="anonymous"></script>
+    <title>El Rincón del Lector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 50px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background: #f1c40f;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url('imagenes/banner.jpg') no-repeat center center/cover;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container header__content">
-            <div class="header__logo">
-                <h1 class="header__title">El Rincón Del Lector</h1>
-            </div>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="#sobre-nosotros" class="nav__link">Sobre Nosotros</a></li>
-                    <li class="nav__item"><a href="#generos" class="nav__link">Géneros</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="logo">Lé</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Reseñas</a></li>
+                <li><a href="#">Club de Lectura</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Título, Autor o ISBN">
+            <button>🔍</button>
         </div>
     </header>
-
+    
     <main>
-        <div class="container" style="margin-top: 2rem; text-align: center;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-5194567494878923"
-                 data-ad-slot="1234567890"  
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
-        <section id="libros" class="books-section">
-            <div class="container">
-                <h2 class="books-section__title">Libros Destacados</h2>
-                <div class="books-section__grid">
-
-                    <article class="book">
-                        <div class="book__image-container">
-                            <img src="imagenes/libro1.jpg" alt="Portada del libro 'Cien años de soledad' de Gabriel García Márquez" class="book__image">
-                        </div>
-                        <div class="book__text-content">
-                            <h3 class="book__title">Cien Años de Soledad</h3>
-                            <p class="book__author">Gabriel García Márquez</p>
-                            <p class="book__description">Una obra maestra de la literatura latinoamericana...</p>
-                        </div>
-                        <a href="resenas/cien-anos-de-soledad.html" class="book__link">Leer más</a>
-                    </article>
-
-                    <article class="book">
-                        <div class="book__image-container">
-                            <img src="imagenes/libro2.jpg" alt="Portada del libro '1984' de George Orwell" class="book__image">
-                        </div>
-                        <div class="book__text-content">
-                            <h3 class="book__title">1984</h3>
-                            <p class="book__author">George Orwell</p>
-                            <p class="book__description">Una distopía clásica sobre la vigilancia y el control.</p>
-                        </div>
-                        <a href="resenas/1984.html" class="book__link">Leer más</a>
-                    </article>
-
-                    <article class="book">
-                        <div class="book__image-container">
-                           <img src="imagenes/libro3.jpg" alt="Portada de el libro 'El Hobbit' de J.R.R. Tolkien" class="book__image">
-                        </div>
-                        <div class="book__text-content">
-                            <h3 class="book__title">El Hobbit</h3>
-                            <p class="book__author">J.R.R. Tolkien</p>
-                            <p class="book__description">Un clasico de fantasia.</p>
-                        </div>
-                        <a href="resenas/el-hobbit.html" class="book__link">Leer más</a>
-                    </article>
-
-                    <article class="book">
-                        <div class="book__image-container">
-                           <img src="imagenes/libro4.jpg" alt="Portada de el libro 'Orgullo y Prejuicio' de Jane Austen" class="book__image">
-                        </div>
-                        <div class="book__text-content">
-                            <h3 class="book__title">Orgullo y Prejuicio</h3>
-                            <p class="book__author">Jane Austen</p>
-                            <p class="book__description">Un clasico de la literatura.</p>
-                        </div>
-                        <a href="resenas/orgullo-y-prejuicio.html" class="book__link">Leer más</a>
-                    </article>
-                </div>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>¡Apúntate al Club de Lectura!</h1>
             </div>
         </section>
-
-        <section id="sobre-nosotros" class="about-us">
-            <div class="container">
-                <h2 class="about-us__title">Sobre Nosotros</h2>
-                <p class="about-us__text">Somos un grupo de apasionados por la lectura que buscamos compartir nuestro amor por los libros con el mundo.  Ofrecemos reseñas, recomendaciones y un espacio para la discusión literaria.</p>
-            </div>
-        </section>
-
-        <section id="generos" class="genres">
-          <div class="container">
-            <h2 class="genres__title">Géneros</h2>
-              <ul class="genres__list">
-                  <li><a href="#" class="genres__link">Fantasía</a></li>
-                  <li><a href="#" class="genres__link">Ciencia Ficción</a></li>
-                  <li><a href="#" class="genres__link">Romance</a></li>
-                  <li><a href="#" class="genres__link">Misterio</a></li>
-                  <li><a href="#" class="genres__link">Thriller</a></li>
-                  <li><a href="#" class="genres__link">Histórico</a></li>
-              </ul>
-          </div>
-        </section>
-
-        <div class="container" style="margin-top: 2rem; text-align: center;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-5194567494878923"
-                 data-ad-slot="2345678901"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
     </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p class="footer__text">&copy; 2024 El Rincón Del Lector. Todos los derechos reservados.</p>
-        </div>
+    
+    <footer>
+        <p>&copy; 2025 El Rincón del Lector | Todos los derechos reservados</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
