@@ -1,216 +1,53 @@
-/* Reset básico y estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ... (tu CSS anterior) ... */
+
+/* Estilos para la página de reseña */
+.book-review {
+    max-width: 800px; /* Ancho máximo del contenido de la reseña */
+    margin: 2rem auto;  /* Centra la reseña y añade espacio arriba y abajo */
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-body {
-    font-family: 'Arial', sans-serif; /* Cambia a tu fuente preferida */
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Utilidades */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden; /* Para evitar problemas con floats, si los usas */
-}
-
-/* Header */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.header__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; /* Espacio entre el logo y el título */
-}
-
-
-.header__title {
-    font-size: 2rem;
-}
-
-/* Navegación */
-.nav {
-  background-color: #444;
-    padding: 0.5rem 0;
-
-}
-
-.nav__list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-}
-
-.nav__link {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: block; /* Para que ocupe todo el ancho del <li> */
-    transition: background-color 0.3s ease;
-
-}
-
-.nav__link:hover {
-    background-color: #555;
-}
-
-/* Sección de Libros */
-.books-section {
-    padding: 2rem 0;
-}
-
-.books-section__title {
+.book-review__image-container {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.books-section__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño responsivo de las tarjetas */
-    gap: 1rem;
-
+.book-review__image {
+    max-width: 200px; /* Ajusta el tamaño de la imagen en la página de reseña */
+    height: auto;
+    border-radius: 4px;
 }
 
-.book {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.2s ease; /* Efecto al hacer hover */
-}
-.book:hover{
-   transform: scale(1.05);
-}
-
-.book__image-container {
-    width: 100%;          /* Ocupa todo el ancho disponible */
-    text-align: center;   /* Centra la imagen horizontalmente */
-    margin-bottom: 0.5rem; /* Espacio entre la imagen y el título */
-}
-
-.book__image {
-    max-width: 150px;    /* Ancho máximo de la imagen (ajusta según tus necesidades) */
-    height: auto;       /* Mantiene la proporción de la imagen */
-    border-radius: 4px;   /* Bordes redondeados (opcional) */
-    display: inline-block; /* Permite centrar horizontalmente con text-align */
-}
-
-
-.book__title {
-    font-size: 1.25rem;
+.book-review__title {
+    font-size: 2.5rem; /* Título más grande en la página de reseña */
     margin-bottom: 0.5rem;
     color: #333;
-
 }
 
-.book__author {
+.book-review__author {
+    font-size: 1.2rem;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: #555;
 }
 
-.book__description {
-    margin-bottom: 0.5rem;
+.book-review__content {
+    line-height: 1.8; /* Mayor interlineado para facilitar la lectura */
 }
 
-.book__link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #337ab7; /* Color de botón, ajústalo */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-.book__link:hover{
-  background-color: #153d61;
-}
-/* Sobre Nosotros */
-.about-us {
-    background-color: #eee;
-    padding: 2rem 0;
-    text-align: center;
+.book-review__content h2 { /* Estilos para los subtítulos dentro de la reseña */
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-.about-us__title {
+.book-review__content p { /* Estilos para los párrafos dentro de la reseña */
     margin-bottom: 1rem;
 }
 
-.about-us__text {
-    max-width: 800px; /* Limita el ancho del texto */
-    margin: 0 auto; /* Centra el texto */
-}
-
-/* Generos */
-
-.genres{
-  padding: 2rem 0;
-}
-
-.genres__title{
-  text-align: center;
-    margin-bottom: 1rem;
-}
-
-.genres__list{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-    gap: 1rem;
-  padding: 0 2rem;
-  flex-wrap: wrap;
-}
-
-.genres__list li a{
-  text-decoration: none;
-  color: #333;
-  padding: 0.2rem;
-}
-
-/* Media Queries (Responsividad) */
-
-/* Pantallas medianas (tablets) */
-@media (max-width: 768px) {
-    .nav__list {
-        flex-direction: column; /* Apila los elementos del menú verticalmente */
-        align-items: center;
-    }
-
-    .books-section__grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo de las tarjetas */
-    }
-    .header__logo{
-      flex-direction: column;
-    }
-  .book__image {
-        max-width: 100px; /* Imagen más pequeña en pantallas medianas */
-    }
-}
-
-/* Pantallas pequeñas (móviles) */
-@media (max-width: 480px) {
-    .books-section__grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-    }
-    .header__title{
-      font-size: 1.5rem;
-    }
-      .book__image {
-        max-width: 80px;  /* Imagen aún más pequeña en móviles */
-    }
-}
+/* ... (resto de tu CSS) ... */
