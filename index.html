@@ -36,7 +36,6 @@
       text-align: center;
       color: #fff;
     }
-
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
@@ -48,7 +47,6 @@
       margin: 20px auto;
       padding: 20px;
     }
-
     h2 {
       font-family: 'Playfair Display', serif;
       margin-bottom: 10px;
@@ -71,26 +69,28 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      text-decoration: none; /* Para quitar el subrayado al enlace */
+      text-decoration: none; /* Quitar subrayado al enlace */
       color: inherit;        /* Mantener color del texto */
     }
 
+    /* Aquí forzamos el tamaño de todas las imágenes */
     .review img {
-      width: 100%;
-      height: auto;
+      width: 150px;        /* Ancho fijo */
+      height: 220px;       /* Alto fijo */
+      object-fit: cover;   /* Recorta la imagen para que encaje */
       display: block;
+      margin: 10px auto;   /* Para centrar la imagen en la tarjeta */
     }
 
     .review-content {
       padding: 15px;
+      text-align: center;   /* Opcional: centramos el texto */
     }
-
     .review-content h3 {
       font-family: 'Playfair Display', serif;
       margin: 0 0 10px 0;
       font-size: 1.3rem;
     }
-
     .review-content p {
       margin: 0;
       line-height: 1.5;
@@ -121,7 +121,6 @@
     <div class="reviews">
       <!-- Reseña 1: Harry Potter -->
       <a class="review" href="reseñas/harry-potter.html">
-        <!-- Ruta local: 'imagenes/harry-potter.jpg' -->
         <img src="imagenes/harry-potter.jpg" alt="Portada Harry Potter" />
         <div class="review-content">
           <h3>Harry Potter y la Piedra Filosofal</h3>
@@ -134,7 +133,6 @@
 
       <!-- Reseña 2: El Gran Gatsby -->
       <a class="review" href="reseñas/gatsby.html">
-        <!-- Ruta local: 'imagenes/gatsby.jpg' -->
         <img src="imagenes/gatsby.jpg" alt="Portada El Gran Gatsby" />
         <div class="review-content">
           <h3>El Gran Gatsby</h3>
@@ -146,7 +144,6 @@
 
       <!-- Reseña 3: 1984 -->
       <a class="review" href="reseñas/1984.html">
-        <!-- Ruta local: 'imagenes/1984.jpg' -->
         <img src="imagenes/1984.jpg" alt="Portada 1984" />
         <div class="review-content">
           <h3>1984</h3>
@@ -159,7 +156,6 @@
 
       <!-- Reseña 4: El Guardián Entre el Centeno -->
       <a class="review" href="reseñas/centeno.html">
-        <!-- Ruta local: 'imagenes/centeno.jpg' -->
         <img src="imagenes/centeno.jpg" alt="Portada El Guardián Entre el Centeno" />
         <div class="review-content">
           <h3>El Guardián Entre el Centeno</h3>
