@@ -34,10 +34,6 @@ body {
     gap: 1rem; /* Espacio entre el logo y el título */
 }
 
-.header__logo-img {
-    width: 50px; /* Ajusta según el tamaño de tu logo */
-    height: auto;
-}
 
 .header__title {
     font-size: 2rem;
@@ -101,13 +97,6 @@ body {
    transform: scale(1.05);
 }
 
-.book__image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    border-radius: 4px;
-
-}
 
 .book__title {
     font-size: 1.25rem;
