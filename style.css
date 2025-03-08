@@ -9,20 +9,20 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Tipografía principal */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
 a {
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-    color: inherit;       /* Hereda el color del texto */
-    transition: color 0.3s ease; /* Transición suave para el color */
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #e74c3c; /* Color al pasar el ratón por encima (rojo, cambia al que quieras) */
+    color: #e74c3c;
 }
 
 /* ==========================================================================
@@ -30,11 +30,11 @@ a:hover {
    ========================================================================== */
 
 .container {
-    width: 85%; /* Ancho del contenedor principal */
-    max-width: 1200px; /* Ancho máximo */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    overflow: hidden; /* Evita problemas con floats */
-    padding: 0 1rem; /* Espacio a los lados */
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 1rem;
 }
 
 /* ==========================================================================
@@ -42,7 +42,7 @@ a:hover {
    ========================================================================== */
 
 .header {
-    background-color: #34495e; /* Azul oscuro */
+    background-color: #34495e;
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
@@ -62,10 +62,10 @@ a:hover {
 }
 
 .header__title {
-    font-family: 'Playfair Display', serif; /* Tipografía para títulos */
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    margin-bottom: 0.5rem;
 }
 
 /* ==========================================================================
@@ -73,7 +73,7 @@ a:hover {
    ========================================================================== */
 
 .nav {
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente transparente */
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 0.75rem 0;
 }
 
@@ -81,7 +81,7 @@ a:hover {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem; /* Más espacio entre elementos */
+    gap: 1.5rem;
 }
 
 .nav__link {
@@ -90,12 +90,12 @@ a:hover {
     padding: 0.5rem 1rem;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 4px;
 }
 
 .nav__link:hover {
-    background-color: #e74c3c; /* Rojo al pasar el ratón */
-    color: #fff; /* Texto blanco al pasar el ratón */
+    background-color: #e74c3c;
+    color: #fff;
 }
 
 /* ==========================================================================
@@ -116,14 +116,4 @@ a:hover {
 
 .books-section__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.book {
-    background-color: #fff;
-    border: 1px solid #eaeaea;
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1
