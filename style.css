@@ -1,11 +1,12 @@
 /* ... (todo tu CSS anterior) ... */
 
 .book__image {
-    width: 100%;        /* La imagen ocupa todo el ancho de su contenedor (.book) */
-    height: auto;       /* Mantiene la proporción de la imagen */
-    margin-bottom: 0.5rem; /* Espacio debajo de la imagen */
-    border-radius: 4px;    /* Opcional: bordes redondeados */
-    /*  Añade cualquier otro estilo que necesites aquí */
+    width: 100%;        /*  ¡IMPORTANTE! */
+    height: auto;       /*  ¡IMPORTANTE! */
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    /* Otros estilos que puedas tener */
+}
 }
 
 /* ... (el resto de tu CSS) ... */
