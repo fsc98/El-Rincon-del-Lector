@@ -5,69 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincón del Lector</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
+
         header {
-            background: #2c3e50;
+            background: #1e3a5f;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             text-align: center;
             font-weight: 700;
+            color: #1e3a5f;
         }
+
         .review {
-            margin-top: 20px;
-            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fafafa;
         }
+
         .review img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 10px;
+            max-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         }
+
+        .review-text {
+            flex: 1;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background: #2c3e50;
+            background: #1e3a5f;
             color: white;
             margin-top: 20px;
+            font-size: 14px;
         }
+
     </style>
 </head>
 <body>
     <header>
-        📚 El Rincón del Lector
+        El Rincón del Lector
     </header>
+    
     <div class="container">
         <h1>Bienvenido a El Rincón del Lector</h1>
-        <p>Reseñas y recomendaciones de libros para amantes de la lectura.</p>
+        <p style="text-align:center;">Descubre reseñas y recomendaciones de libros para apasionados de la lectura.</p>
+        
         <div class="review">
-            <h2>📖 Reseña: Harry Potter y la Piedra Filosofal</h2>
             <img src="imagenes/harry-potter.jpg" alt="Portada de Harry Potter">
-            <p>Una historia mágica que sigue las aventuras de Harry Potter en su primer año en Hogwarts. Un libro que ha encantado a millones de lectores.</p>
+            <div class="review-text">
+                <h2>Reseña: Harry Potter y la Piedra Filosofal</h2>
+                <p>Una historia mágica que sigue las aventuras de Harry Potter en su primer año en Hogwarts. Un libro que ha encantado a millones de lectores en todo el mundo. Un clásico de la literatura juvenil que no te puedes perder.</p>
+            </div>
         </div>
     </div>
+
     <footer>
-        &copy; 2025 El Rincón del Lector | Diseñado con❤️ para los lectores.
+        &copy; 2025 El Rincón del Lector | Diseñado para los lectores.
     </footer>
 </body>
 </html>
