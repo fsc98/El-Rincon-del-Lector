@@ -1,53 +1,114 @@
-/* ... (tu CSS anterior) ... */
+/* ==========================================================================
+   RESET & GENERALES
+   ========================================================================== */
 
-/* Estilos para la página de reseña */
-.book-review {
-    max-width: 800px; /* Ancho máximo del contenido de la reseña */
-    margin: 2rem auto;  /* Centra la reseña y añade espacio arriba y abajo */
-    padding: 1rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.book-review__image-container {
+body {
+    font-family: 'Roboto', sans-serif; /* Tipografía principal */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit;       /* Hereda el color del texto */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+a:hover {
+    color: #e74c3c; /* Color al pasar el ratón por encima (rojo, cambia al que quieras) */
+}
+
+/* ==========================================================================
+   UTILIDADES
+   ========================================================================== */
+
+.container {
+    width: 85%; /* Ancho del contenedor principal */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    overflow: hidden; /* Evita problemas con floats */
+    padding: 0 1rem; /* Espacio a los lados */
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.header {
+    background-color: #34495e; /* Azul oscuro */
+    color: #fff;
+    padding: 1.5rem 0;
     text-align: center;
-    margin-bottom: 1rem;
+}
+.header__content{
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-.book-review__image {
-    max-width: 200px; /* Ajusta el tamaño de la imagen en la página de reseña */
-    height: auto;
-    border-radius: 4px;
+.header__logo {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.book-review__title {
-    font-size: 2.5rem; /* Título más grande en la página de reseña */
-    margin-bottom: 0.5rem;
-    color: #333;
+.header__title {
+    font-family: 'Playfair Display', serif; /* Tipografía para títulos */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
 }
 
-.book-review__author {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-    color: #555;
+/* ==========================================================================
+   NAVEGACIÓN
+   ========================================================================== */
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente transparente */
+    padding: 0.75rem 0;
 }
 
-.book-review__content {
-    line-height: 1.8; /* Mayor interlineado para facilitar la lectura */
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Más espacio entre elementos */
 }
 
-.book-review__content h2 { /* Estilos para los subtítulos dentro de la reseña */
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px; /* Bordes redondeados */
 }
 
-.book-review__content p { /* Estilos para los párrafos dentro de la reseña */
-    margin-bottom: 1rem;
+.nav__link:hover {
+    background-color: #e74c3c; /* Rojo al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
 }
 
-/* ... (resto de tu CSS) ... */
+/* ==========================================================================
+   SECCIÓN DE LIBROS (Página principal)
+   ========================================================================== */
+
+.books-section {
+    padding: 3rem 0;
+}
+
+.books-section__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3
