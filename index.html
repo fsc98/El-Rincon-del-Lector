@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6; /* Mejora legibilidad */
         }
         header {
             display: flex;
@@ -31,34 +32,50 @@
             display: flex;
             gap: 20px;
         }
-        nav ul li {
-            display: inline;
-        }
         nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
+            padding: 10px 15px; /* Agregamos padding para hacer los enlaces más clickeables */
+            display: inline-block; /* Para que el padding funcione correctamente */
+            transition: background-color 0.3s ease; /* Transición suave */
         }
+       nav ul li a:hover{
+            background-color: #f1c40f;
+            color: #2c3e50;
+        }
+
         .search-bar {
             display: flex;
         }
         .search-bar input {
-            padding: 5px;
+            padding: 8px; /* Más padding */
             border: none;
             border-radius: 5px;
+            margin-right: 5px; /* Separación entre input y botón */
+            width: 200px; /* Ancho fijo para el input */
         }
         .search-bar button {
             background: #f1c40f;
             border: none;
-            padding: 5px 10px;
+            padding: 8px 12px; /* Más padding */
             cursor: pointer;
             border-radius: 5px;
+            color: #2c3e50; /* Color de texto para el botón */
+            font-weight: bold; /* Texto en negrita */
+            transition: background-color 0.3s ease; /* Transición */
         }
+
+        .search-bar button:hover {
+            background-color: #e6b800; /* Color más oscuro al pasar el ratón */
+        }
+
         .hero {
             position: relative;
             width: 100%;
             height: 300px;
-            background: url('imagenes/banner.jpg') no-repeat center center/cover;
+            background: url('imagenes/banner.jpg') no-repeat center center/cover;  /* Asegúrate de que la imagen exista */
+            margin-bottom: 30px; /* Espacio debajo del hero */
         }
         .hero-text {
             position: absolute;
@@ -67,30 +84,165 @@
             transform: translate(-50%, -50%);
             background: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 20px;
+            padding: 30px;  /* Más padding */
             border-radius: 10px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px; /* Texto más grande */
+            width: 80%;  /* Ancho del texto */
+            max-width: 600px; /* Ancho máximo */
         }
+
+        main {
+            padding: 0 50px; /* Padding a los lados del contenido principal */
+            max-width: 1200px; /* Ancho máximo para el contenido */
+            margin: 0 auto;  /* Centrar el contenido */
+        }
+        .section-title {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+      .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .book-item{
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        text-align: center;
+      }
+        .book-item img{
+            max-width: 100%; /*hace que se ajuste la img*/
+            height: auto;/*altura automatica*/
+            margin-bottom: 10px; /*separacion entre imagen y texto*/
+        }
+
+
+        .book-item h3 {
+          font-size: 1.2em;
+          margin-bottom: 5px;
+        }
+
+        .book-item p {
+          font-size: 1em;
+          color: #666;
+        }
+
+        /* Estilos para la sección de contacto (formulario) */
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-form label {
+            display: block; /* Etiquetas en bloque */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Incluye padding y border en el ancho */
+        }
+
+        .contact-form textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
+        }
+
+        .contact-form button[type="submit"] {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+      .contact-form button[type="submit"]:hover{
+          background-color: #34495e;
+      }
+    .review-container {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+      }
+
+      .review-container h3 {
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .review-container p {
+        margin-bottom: 10px;
+      }
+
+      .review-author {
+        font-style: italic;
+        color: #555;
+      }
+      .club-info {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+    .club-info h2 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        }
+    .club-info h3{
+          color: #2a4365;
+          font-size: large;
+      }
+
+
         footer {
             text-align: center;
             padding: 20px;
             background: #2c3e50;
             color: white;
-            margin-top: 20px;
+            margin-top: 40px; /* Más espacio arriba del footer */
+        }
+
+        /* Estilos responsive (opcional pero recomendado) */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+                padding: 15px;
+            }
+            nav ul {
+                margin-top: 10px;
+            }
+            .search-bar {
+                margin-top: 10px;
+            }
+            .search-bar input{
+                width: 100%;
+            }
+            main {
+                padding: 0 20px; /* Menos padding en pantallas pequeñas */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Lé</div>
+        <div class="logo">El Rincón del Lector</div>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Libros</a></li>
-                <li><a href="#">Reseñas</a></li>
-                <li><a href="#">Club de Lectura</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="resenas.html">Reseñas</a></li>
+                <li><a href="club.html">Club de Lectura</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="search-bar">
@@ -98,17 +250,182 @@
             <button>🔍</button>
         </div>
     </header>
-    
+
     <main>
         <section class="hero">
             <div class="hero-text">
-                <h1>¡Apúntate al Club de Lectura!</h1>
+                <h1>Bienvenido a El Rincón del Lector</h1>
+                <p>Tu espacio para descubrir, compartir y disfrutar de la lectura.</p>
             </div>
         </section>
+<section id="inicio">
+  <h2 class="section-title">Descubre Nuevos Mundos</h2>
+    <div class="book-grid">
+        <div class="book-item">
+        <img src="imagenes/libro1.jpg" alt="Portada de Cien años de soledad">
+        <h3>Cien años de soledad</h3>
+        <p>Gabriel García Márquez</p>
+      </div>
+        <div class="book-item">
+        <img src="imagenes/libro2.jpg" alt="Portada de 1984">
+        <h3>1984</h3>
+        <p>George Orwell</p>
+      </div>
+        <div class="book-item">
+        <img src="imagenes/libro3.jpg" alt="Portada de Orgullo y prejuicio">
+        <h3>Orgullo y prejuicio</h3>
+        <p>Jane Austen</p>
+      </div>
+         <div class="book-item">
+        <img src="imagenes/libro4.jpg" alt="Portada de El Hobbit">
+        <h3>El Hobbit</h3>
+        <p>J.R.R. Tolkien</p>
+      </div>
+    </div>
+
+</section>
+
+<section id="libros">
+    <h2 class="section-title">Nuestro Catálogo</h2>
+    <p>Explora nuestra selección de libros de diversos géneros y autores.  ¡Encuentra tu próxima lectura favorita!</p>
+   <div class="book-grid">
+        <div class="book-item">
+        <img src="imagenes/libro5.jpg" alt="Portada de El principito">
+        <h3>El principito</h3>
+        <p>Antoine de Saint-Exupéry</p>
+      </div>
+       <div class="book-item">
+        <img src="imagenes/libro6.jpg" alt="Portada de Crimen y castigo">
+        <h3>Crimen y castigo</h3>
+        <p>Fiódor Dostoievski</p>
+      </div>
+       <div class="book-item">
+        <img src="imagenes/libro7.jpg" alt="Portada de Matar a un ruiseñor">
+        <h3>Matar a un ruiseñor</h3>
+        <p>Harper Lee</p>
+      </div>
+        <div class="book-item">
+        <img src="imagenes/libro8.jpg" alt="Portada de Don Quijote de la Mancha">
+        <h3>Don Quijote de la Mancha</h3>
+        <p>Miguel de Cervantes</p>
+      </div>
+
+    </div>
+
+</section>
+
+<section id="resenas">
+        <h2 class="section-title">Reseñas Recientes</h2>
+
+        <div class="review-container">
+          <h3>Cien años de soledad - Una obra maestra atemporal</h3>
+          <p>
+            "Cien años de soledad" de Gabriel García Márquez no es solo una novela,
+            es una experiencia inmersiva en el mundo mágico y a la vez realista de Macondo.
+            La saga de la familia Buendía, con sus alegrías, tragedias, amores y desamores,
+            es un reflejo de la historia y la cultura latinoamericana.
+          </p>
+          <p class="review-author">- Ana R.</p>
+        </div>
+
+        <div class="review-container">
+          <h3>1984 - Una distopía inquietante y relevante</h3>
+          <p>
+            La novela de George Orwell es una advertencia sobre los peligros del totalitarismo
+            y la vigilancia estatal.  La historia de Winston Smith, un hombre que se rebela
+            contra un régimen opresor, es una lectura obligada en estos tiempos de
+            desinformación y control.
+          </p>
+          <p class="review-author">- Juan P.</p>
+        </div>
+        <div class="review-container">
+          <h3>"El Hobbit" - Una Aventura Fantástica Inolvidable</h3>
+          <p>
+            "El Hobbit" de J.R.R. Tolkien es una joya de la literatura fantástica.
+              La historia de Bilbo Bolsón, un hobbit apacible que se embarca en
+              una aventura épica junto a un grupo de enanos y un mago, es una
+              experiencia cautivadora para lectores de todas las edades.
+          </p>
+          <p class="review-author">- Sofía M.</p>
+        </div>
+      </section>
+
+<section id="club">
+    <h2 class="section-title">Nuestro Club de Lectura</h2>
+
+    <div class="club-info">
+        <h3>¿Cómo funciona?</h3>
+        <p>
+            Cada mes, elegimos un libro para leer y discutir juntos.  Nos reunimos virtualmente
+            (a través de Zoom, Discord, o la plataforma que decidamos) para compartir nuestras
+            opiniones, análisis y experiencias.  ¡Todos son bienvenidos, sin importar su nivel
+            de experiencia como lectores!
+        </p>
+
+        <h3>Libro del Mes:</h3>
+        <p>
+           Este mes, leeremos <strong>"Crimen y castigo"</strong> de Fiódor Dostoievski.
+            Prepárate para sumergirte en la mente de Raskólnikov y explorar los
+            rincones más oscuros del alma humana.
+        </p>
+
+        <h3>Próxima Reunión:</h3>
+        <p>
+            Nuestra próxima reunión será el <strong>sábado 25 de mayo a las 18:00 (hora local)</strong>.
+            ¡Únete a nosotros para un debate apasionante!  El enlace a la reunión se enviará
+            por correo electrónico a los miembros registrados.
+        </p>
+    </div>
+</section>
+
+
+
+<section id="contacto">
+  <h2 class="section-title">Contacto</h2>
+
+    <p>¿Tienes alguna pregunta, sugerencia o comentario?  ¡No dudes en contactarnos!</p>
+
+    <form class="contact-form" action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
     </main>
-    
+
     <footer>
-        <p>&copy; 2025 El Rincón del Lector | Todos los derechos reservados</p>
+        <p>&copy; 2024 El Rincón del Lector | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        const searchButton = document.querySelector('.search-bar button');
+        const searchInput = document.querySelector('.search-bar input');
+
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const pageContent = document.body.textContent.toLowerCase();
+
+            if (searchTerm === "") {
+                alert("Por favor, introduce un término de búsqueda.");
+                return;
+            }
+
+            if (pageContent.includes(searchTerm)) {
+                alert(`Se encontró "${searchTerm}" en la página.`);
+              // Podrías implementar un resaltado de resultados aquí
+
+            } else {
+                alert(`No se encontró "${searchTerm}" en la página.`);
+            }
+        });
+    </script>
 </body>
 </html>
