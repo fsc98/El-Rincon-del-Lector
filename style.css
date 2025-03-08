@@ -73,4 +73,8 @@ a:hover {
    ========================================================================== */
 
 .nav {
-    background-color: rgba(0, 0,
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente transparente */
+    padding: 0.75rem 0;
+}
+
+.nav
