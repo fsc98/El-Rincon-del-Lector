@@ -73,42 +73,4 @@ a:hover {
    ========================================================================== */
 
 .nav {
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente transparente */
-    padding: 0.75rem 0;
-}
-
-.nav__list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem; /* Más espacio entre elementos */
-}
-
-.nav__link {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 4px; /* Bordes redondeados */
-}
-
-.nav__link:hover {
-    background-color: #e74c3c; /* Rojo al pasar el ratón */
-    color: #fff; /* Texto blanco al pasar el ratón */
-}
-
-/* ==========================================================================
-   SECCIÓN DE LIBROS (Página principal)
-   ========================================================================== */
-
-.books-section {
-    padding: 3rem 0;
-}
-
-.books-section__title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #344
+    background-color: rgba(0, 0,
